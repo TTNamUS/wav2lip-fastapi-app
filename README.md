@@ -10,7 +10,7 @@ This project provides a real-time lip-syncing API using WebSockets, powered by t
 - Supports image and audio file uploads
 - Returns generated video with synchronized lips
 - Easy-to-use web frontend for quick testing
-- Powered by the state-of-the-art Wav2Lip model
+- Powered by the state-of-the-art [Wav2Lip model](https://github.com/Rudrabha/Wav2Lip)
 
 ## How It Works
 
@@ -18,6 +18,25 @@ This project provides a real-time lip-syncing API using WebSockets, powered by t
 2. The backend receives the data, processes it with the Wav2Lip model, and generates a video with synchronized lips.
 3. The server responds with a base64-encoded video file.
 4. The client decodes and displays or saves the video.
+
+## Project Architecture
+```
+wav2lip-fastapi-app/
+├── app/
+│   ├── main.py              # FastAPI entry point and route definitions
+│   ├── api/                 # API route handlers
+│   ├── services/            # Core business logic and processing
+│   ├── models/              # Deep learning models (including Wav2Lip)
+│   └── utils/               # Utility functions and helpers
+├── checkpoints/             # Pre-trained model weights (e.g., Wav2Lip.pth)
+├── static/                  # Web-based demo client
+├── test.py                  # Script for testing the WebSocket API
+├── pyproject.toml           # Python dependencies and project metadata
+├── uv.lock                  # Locked dependency versions for uv
+├── docker-compose.yml       # Docker Compose configuration
+├── Dockerfile               # Docker build instructions
+└── README.md                # Project documentation
+```
 
 ## Installation
 
@@ -94,6 +113,23 @@ You can use the provided `test.py` script to test the WebSocket API.
 ```sh
 uv run test.py
 ```
+
+## Future Work
+- **Improved Error Handling:** Provide more detailed error messages and robust handling of edge cases (e.g., corrupted files, unsupported formats).
+- **API Documentation:** Expand and improve API documentation with OpenAPI/Swagger and more usage examples.
+- **Frontend Enhancements:** Improve the web demo with progress indicators, drag-and-drop support, and better UX/UI.
+- **Internationalization:** Add support for multiple languages in the frontend and API responses.
+- **Logging & Monitoring:** Integrate advanced logging, monitoring, and alerting for production readiness.
+- **Automated Testing & CI/CD:** Add comprehensive unit/integration tests and set up continuous integration/deployment pipelines.
+- **Cloud Deployment:** Provide scripts and documentation for seamless deployment on popular cloud platforms (AWS, Azure, GCP).
+- **User Authentication & Rate Limiting:** Secure the API with authentication and add rate limiting to prevent abuse.
+- **GPU/TPU Acceleration:** Add support for hardware acceleration and automatic device selection.
+- **Model Optimization:** Optimize the Wav2Lip model for faster inference and lower resource consumption, possibly via quantization or model distillation.
+- **Batch Processing Support:** Enable processing multiple image/audio pairs in a single request for bulk operations.
+- **Video Input Support:** Allow users to upload video files (not just static images) for full video-to-video lip-syncing.
+- **Speaker Diarization:** Integrate speaker identification to support multi-speaker audio and assign correct lip-sync to each face in group images or videos.
+- **Real-time Streaming:** Implement real-time audio/video streaming support for live lip-sync applications.
+
 
 ## Contributing
 
