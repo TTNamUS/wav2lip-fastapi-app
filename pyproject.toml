@@ -1,0 +1,20 @@
+[project]
+name = "test"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi==0.104.1",
+    "librosa>=0.8.0",
+    "numba>=0.48",
+    "numpy>=1.19.0",
+    "opencv-contrib-python>=4.2.0.34",
+    "opencv-python>=4.2.0.0",
+    "python-multipart==0.0.6",
+    "torch>=1.8.0",
+    "torchvision>=0.9.0",
+    "tqdm>=4.45.0",
+    "uvicorn[standard]==0.24.0",
+    "websockets==12.0",
+]

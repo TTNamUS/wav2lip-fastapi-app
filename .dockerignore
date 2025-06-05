@@ -1,0 +1,47 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.env
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git files
+.git/
+.gitignore
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Development files
+.pytest_cache/
+.coverage
+*.cover
+.hypothesis/
+
+# Docker files (not needed inside container)
+docker-compose.yml
+.dockerignore 
+
+# Model checkpoints (use Docker volume instead)
+checkpoints/*.pth
+checkpoints/*.pt
+checkpoints/*.ckpt
