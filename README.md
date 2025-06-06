@@ -30,7 +30,7 @@ wav2lip-fastapi-app/
 │   └── utils/               # Utility functions and helpers
 ├── checkpoints/             # Pre-trained model weights (e.g., Wav2Lip.pth)
 ├── static/                  # Web-based demo client
-├── test.py                  # Script for testing the WebSocket API
+├── tests/                   # Testing the WebSocket API
 ├── pyproject.toml           # Python dependencies and project metadata
 ├── uv.lock                  # Locked dependency versions for uv
 ├── docker-compose.yml       # Docker Compose configuration
@@ -79,11 +79,11 @@ http://localhost:8000
 ```
 
 ### Frontend Demo
-Face Image: [andrew-ng.png](andrew-ng.png)  
-Audio: [test.wav](test.wav)  
+Face Image: [andrew-ng.png](tests/andrew-ng.png)  
+Audio: [test.wav](tests/test.wav)  
 
-=> Output: [output.mp4](output.mp4)
-![Frontend Demo Screenshot](frontend_screenshot.png)
+=> Output: [output.mp4](tests/output.mp4)
+![Frontend Demo Screenshot](tests/frontend_screenshot.png)
 
 ## Usage
 
@@ -106,7 +106,7 @@ Audio: [test.wav](test.wav)
 
 ### Example - Testing with test.py
 
-You can use the provided `test.py` script to test the WebSocket API.
+You can use the provided [tests/test.py](tests/test.py) script to test the WebSocket API.
 
 **Usage:**
 
